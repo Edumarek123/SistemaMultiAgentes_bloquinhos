@@ -1,29 +1,77 @@
+<div align="center">
+
 # Multi-Agent System — Moving Blocks
 
-A Java multi-agent simulation using threads to coordinate the movement of simple visual agents.
+**A Java simulation of agents coordinating their movement around a shared target.**
 
-## Behavior
+![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
+![Concept](https://img.shields.io/badge/concepts-concurrency%20%7C%20multi--agent-6f42c1)
+![Status](https://img.shields.io/badge/status-study%20prototype-lightgrey)
 
-- Blue blocks follow an orange target block.
+</div>
+
+## Overview
+
+This project implements a small multi-agent simulation in Java using threads. Blue agents move in relation to an orange target while respecting minimum-distance constraints.
+
+It is a compact environment for exploring concurrent execution and coordination rules between multiple moving entities.
+
+## Agent behavior
+
+- Blue blocks follow the orange target.
 - A minimum distance is maintained between each blue block and the target.
-- A minimum distance is also maintained between the blue blocks.
+- A minimum distance is maintained between blue blocks themselves.
 
-## Technologies and concepts
+These rules define the interaction model documented for the project.
+
+## Technology stack
 
 - Java
-- Threads
+- Threads for concurrent agent execution
+
+## Getting started
+
+### Requirements
+
+- Java Development Kit (JDK)
+- A terminal environment with `javac` and `java`
+
+### Build
+
+The repository includes a helper script:
+
+```bash
+chmod +x comp.sh
+./comp.sh
+```
+
+The script contains the original compilation procedure. Review it if your JDK or directory layout differs.
+
+### Run
+
+Execute the class produced by the build script. The exact class name and launch command depend on the source files under `src/`.
+
+## Repository layout
+
+```text
+.
+├── src/
+├── comp.sh
+└── README.md
+```
+
+## Concepts explored
+
 - Multi-agent systems
-- Distance constraints and coordinated behavior
+- Concurrency and threads
+- Target-following behavior
+- Distance constraints
+- Coordinated movement
 
-## Repository contents
+## Project status
 
-- `src/` — source code
-- `comp.sh` — compilation helper script
+Educational simulation / prototype. Formal performance and scalability testing are not documented.
 
-## Purpose
+## License
 
-An educational simulation exploring concurrent execution and coordination between multiple agents.
-
-## Status
-
-Study / prototype project.
+No license file was identified in the repository at the time of writing. Contact the author before redistributing or reusing the project.
